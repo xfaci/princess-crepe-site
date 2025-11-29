@@ -127,3 +127,25 @@ export const menuCategories: MenuCategory[] = [
         ],
     },
 ];
+// data/menu.ts
+export type MenuItem = {
+    name: string;
+    price: number;
+    highlight?: boolean;
+};
+
+export type MenuCategory = {
+    id: string;
+    title: string;
+    subtitle?: string;
+    items: MenuItem[];
+};
+
+export const menuCategories: MenuCategory[] = [
+    // ... tes catégories ici
+];
+
+// ✅ Ajoute cette fonction + export
+export function formatPrice(price: number): string {
+    return price.toFixed(1).replace(".", ",") + " €";
+}
