@@ -1,3 +1,5 @@
+// data/menu.ts
+
 export type MenuItem = {
     name: string;
     price: number; // en euros
@@ -41,7 +43,11 @@ export const menuCategories: MenuCategory[] = [
             { name: "Crème pâtissière chocolat banane", price: 4.5 },
             { name: "Crème pâtissière banane chantilly", price: 4.5 },
             { name: "Crème pâtissière chocolat amande", price: 4.8 },
-            { name: "Crème pâtissière banane chocolat chantilly", price: 4.8, highlight: true },
+            {
+                name: "Crème pâtissière banane chocolat chantilly",
+                price: 4.8,
+                highlight: true,
+            },
         ],
     },
     {
@@ -54,8 +60,15 @@ export const menuCategories: MenuCategory[] = [
             { name: "Glace vanille banane chocolat chantilly", price: 5.3 },
             { name: "Glace vanille caramel noix chantilly", price: 5.3 },
             { name: "Glace vanille chocolat noix chantilly", price: 5.3 },
-            { name: "Glace vanille caramel cheesecake chantilly", price: 6.0, highlight: true },
-            { name: "Glace vanille crème pâtissière banane chocolat chantilly", price: 6.0 },
+            {
+                name: "Glace vanille caramel cheesecake chantilly",
+                price: 6.0,
+                highlight: true,
+            },
+            {
+                name: "Glace vanille crème pâtissière banane chocolat chantilly",
+                price: 6.0,
+            },
         ],
     },
     {
@@ -65,12 +78,31 @@ export const menuCategories: MenuCategory[] = [
         items: [
             { name: "Glace au chocolat chocolat chantilly", price: 4.5 },
             { name: "Glace au chocolat Nutella chantilly", price: 4.5 },
-            { name: "Glace au chocolat chocolat banane chantilly", price: 5.3 },
-            { name: "Glace au chocolat chocolat fraise chantilly", price: 5.3 },
-            { name: "Glace au chocolat chocolat Nutella chantilly", price: 5.3 },
-            { name: "Glace au chocolat chocolat banane Nutella", price: 5.3 },
-            { name: "Glace au chocolat chocolat crème pâtissière chantilly", price: 6.0 },
-            { name: "Glace au chocolat chocolat gâteau au chocolat chantilly", price: 6.0, highlight: true },
+            {
+                name: "Glace au chocolat chocolat banane chantilly",
+                price: 5.3,
+            },
+            {
+                name: "Glace au chocolat chocolat fraise chantilly",
+                price: 5.3,
+            },
+            {
+                name: "Glace au chocolat chocolat Nutella chantilly",
+                price: 5.3,
+            },
+            {
+                name: "Glace au chocolat chocolat banane Nutella",
+                price: 5.3,
+            },
+            {
+                name: "Glace au chocolat chocolat crème pâtissière chantilly",
+                price: 6.0,
+            },
+            {
+                name: "Glace au chocolat chocolat gâteau au chocolat chantilly",
+                price: 6.0,
+                highlight: true,
+            },
         ],
     },
     {
@@ -81,7 +113,10 @@ export const menuCategories: MenuCategory[] = [
             { name: "Chocolat", price: 3.0 },
             { name: "Chocolat banane", price: 3.5 },
             { name: "Chocolat amande", price: 3.5 },
-            { name: "Chocolat amande glace (vanille ou chocolat)", price: 4.5 },
+            {
+                name: "Chocolat amande glace (vanille ou chocolat)",
+                price: 4.5,
+            },
             { name: "Cannelle chocolat", price: 3.5 },
             { name: "Cannelle chocolat amande", price: 3.8 },
         ],
@@ -95,7 +130,11 @@ export const menuCategories: MenuCategory[] = [
             { name: "Chocolat cheesecake chantilly", price: 5.0 },
             { name: "Caramel cheesecake chantilly", price: 5.3 },
             { name: "Framboise cheesecake chantilly", price: 5.3 },
-            { name: "Fraise cheesecake chantilly", price: 5.3, highlight: true },
+            {
+                name: "Fraise cheesecake chantilly",
+                price: 5.3,
+                highlight: true,
+            },
         ],
     },
     {
@@ -103,7 +142,10 @@ export const menuCategories: MenuCategory[] = [
         title: "Garniture supplémentaire",
         subtitle: "Personnalisez votre crêpe à l'infini",
         items: [
-            { name: "Cannelle, noix, amandes, chocolat, Nutella, nappage caramel, nappage fraise", price: 0.8 },
+            {
+                name: "Cannelle, noix, amandes, chocolat, Nutella, nappage caramel, nappage fraise",
+                price: 0.8,
+            },
             { name: "Kit Kat, M&M’s, Oreo", price: 1.0 },
             { name: "Crème chantilly", price: 1.0 },
             { name: "Crème pâtissière", price: 1.3 },
@@ -127,25 +169,8 @@ export const menuCategories: MenuCategory[] = [
         ],
     },
 ];
-// data/menu.ts
-export type MenuItem = {
-    name: string;
-    price: number;
-    highlight?: boolean;
-};
 
-export type MenuCategory = {
-    id: string;
-    title: string;
-    subtitle?: string;
-    items: MenuItem[];
-};
-
-export const menuCategories: MenuCategory[] = [
-    // ... tes catégories ici
-];
-
-// ✅ Ajoute cette fonction + export
+// Helper pour formater les prix
 export function formatPrice(price: number): string {
     return price.toFixed(1).replace(".", ",") + " €";
 }
