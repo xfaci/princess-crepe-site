@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/x/Documents/princess/app/layout\":[\"static/media/0e9d289c6eb42bf7-s.p.woff2\",\"static/media/a74fb1607b845cb0-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
